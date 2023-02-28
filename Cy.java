@@ -7,7 +7,6 @@ public Methods methods; Spoiler: Config Code (Text): //Create Config
     getConfig().set("currency-name", currencyName);         
     saveConfig(); Spoiler: BalanceManager 
 
-
 Code (Text): public double getBalance(Player p) {         
 m.getConfig().getDouble(p.getName() + "-money");  
 
@@ -16,8 +15,7 @@ return m.getConfig().getDouble(p.getName() + "-money"); }
 public double addToBalance(Player p,double numberToAddTo) {         
 double sum = getBalance(p) + numberToAddTo;         
 m.getConfig().set(p.getName() + "-money", sum);  
- 
- 
+  
 return sum;     }     public double setBalance(Player p, double numberToSet) {        
 m.getConfig().set(p.getName() + "-money", numberToSet);  
   
@@ -71,7 +69,8 @@ p.sendMessage(currencyName + ": " + String.valueOf(methods.getBalance(p)));     
             p.sendMessage("Correct syntax: /balance take <PlayerName> <NumberToTakeFrom>");                            
             p.sendMessage("For Example: 3.9");                         }                     } 
         else if (args[0].equalsIgnoreCase("set")) {                         
-          try {                             
+          try {                   
+          
             if (Bukkit.getPlayer(args[1]) != null) {                                 
               methods.setBalance(Bukkit.getPlayer(args[1]), Double.parseDouble(args[2]));                                 
               p.sendMessage("Set " + args[1]+"'s"+" balance to " + args[2]);                             }                             
