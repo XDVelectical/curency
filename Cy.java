@@ -15,7 +15,8 @@ return m.getConfig().getDouble(p.getName() + "-money"); }
 public double addToBalance(Player p,double numberToAddTo) {         
 double sum = getBalance(p) + numberToAddTo;         
 m.getConfig().set(p.getName() + "-money", sum);  
-  
+ 
+ 
 return sum;     }     public double setBalance(Player p, double numberToSet) {        
 m.getConfig().set(p.getName() + "-money", numberToSet);  
   
