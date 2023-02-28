@@ -7,6 +7,7 @@ public Methods methods; Spoiler: Config Code (Text): //Create Config
     getConfig().set("currency-name", currencyName);         
     saveConfig(); Spoiler: BalanceManager 
 
+
 Code (Text): public double getBalance(Player p) {         
 m.getConfig().getDouble(p.getName() + "-money");  
 
