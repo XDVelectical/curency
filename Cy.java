@@ -82,5 +82,7 @@ p.sendMessage(currencyName + ": " + String.valueOf(methods.getBalance(p)));     
   return false;     } 
 Code (Text): getCommand("balance").setExecutor(this); 
 getCommand("bal").setExecutor(this); 
+
 (Text): saveConfig(); Here is the plugin.yml You can change the name of the plugin. Spoiler: plugin.yml Code 
+
 (Text): name: AKCredits version: 1.0 main: me.AKZOMBIE74.AKCredits commands:   balance:     description: Do /balance help     aliases: [balx]
