@@ -69,7 +69,8 @@ p.sendMessage(currencyName + ": " + String.valueOf(methods.getBalance(p)));     
             p.sendMessage("Correct syntax: /balance take <PlayerName> <NumberToTakeFrom>");                            
             p.sendMessage("For Example: 3.9");                         }                     } 
         else if (args[0].equalsIgnoreCase("set")) {                         
-          try {                             
+          try {                   
+          
             if (Bukkit.getPlayer(args[1]) != null) {                                 
               methods.setBalance(Bukkit.getPlayer(args[1]), Double.parseDouble(args[2]));                                 
               p.sendMessage("Set " + args[1]+"'s"+" balance to " + args[2]);                             }                             
