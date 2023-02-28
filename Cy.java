@@ -11,6 +11,7 @@ public Methods methods; Spoiler: Config Code (Text): //Create Config
 Code (Text): public double getBalance(Player p) {         
 m.getConfig().getDouble(p.getName() + "-money");  
 
+
 return m.getConfig().getDouble(p.getName() + "-money"); }
 
 public double addToBalance(Player p,double numberToAddTo) {         
